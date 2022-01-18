@@ -12,7 +12,7 @@ projects:
     source:
       location: 'https://github.com/btison/quarkus-service-registry-quickstart-crw'
       type: git
-      sparseCheckoutDir: consumer
+      sparseCheckoutDir: producer
       branch: main
 components:
   - mountSources: true
@@ -32,6 +32,7 @@ components:
     image: registry.access.redhat.com/ubi8/ubi-minimal
   - id: redhat/quarkus-java11/latest
     type: chePlugin
+    registryUrl: 'https://eclipse-che.github.io/che-plugin-registry/7.38.0/v3/'
   - mountSources: true
     endpoints:
       - attributes:
